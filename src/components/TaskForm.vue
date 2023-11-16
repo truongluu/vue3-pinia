@@ -9,13 +9,6 @@
 import { ref } from "vue";
 import { useTaskStore } from "../stores/TaskStore";
 
-function removeNthFromEnd(arr: any[], position: number) {
-  const temp = [...arr];
-  temp.splice(arr.length - 1 - position, 1);
-  return temp;
-}
-removeNthFromEnd([12, 3, 4, 2], 0);
-
 const taskStore = useTaskStore();
 const newTask = ref("");
 const handleSubmit = () => {
